@@ -1,0 +1,21 @@
+{
+    "Location_ID": 222348,
+    "Location_NAP": {
+       "name": "ASSAGGIO RISTORANTE & PIZZERIA",
+       "address": {
+           "address1": "157 WHITE STONE ROAD",
+           "address2": null,
+           "city": "LONG ISLAND",
+           "state": "NY",
+           "zipcode": "11789"
+       },
+       "phone": "(631) 821-5600"
+    },
+    "Action_Description": "Known for its impressive menu and authentic cuisine, Assaggio Ristorante & Pizzeria keeps guests coming back to enjoy its superb cuisine and friendly service.",
+    "Action_Title": "Discount Certificate",
+    "Action_URL": "http://www.restaurant.com/assaggio-ristorante-pizzeria-xxxxx-pid=222348",
+    "Action_Category": "Restaurant",
+    "Location_Lat": null,
+    "Action_Image": "http://rdc.rdcimage.com/partner-images/222348/mainlogo_logo.jpg",
+    "Created_Date": "2014-08-27T14:20:03+00:00"
+}

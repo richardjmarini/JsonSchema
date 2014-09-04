@@ -1,0 +1,6 @@
+django
+jsonschema
+jsonref
+djangorestframework
+markdown
+django-filter

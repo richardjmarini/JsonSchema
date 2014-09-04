@@ -1,0 +1,86 @@
+{
+    "timestamp": "2014-08-27T14:20:03+00:00",
+    "id": "0db658a6-0769-11e4-8291-3ca9f46675e0",
+    "action": "create",
+    "type": "location",
+    "payload": {
+        "business_type": "Restaurants",
+        "status": {
+            "publisher": false,
+            "step": "done",
+            "class": "new"
+        },
+        "is_owner_verified": true,
+        "updated": "2014-08-27T14:20:03+00:00",
+        "description": "the place to go for hairy ribs",
+        "subscribed": true,
+        "created": "2014-08-27T14:20:03+00:00",
+        "foreign_ids": [
+            "243415345785726",
+            "243442992452244",
+            "243415345785726"
+        ],
+        "has_photos": 10,
+        "hours": [
+            {
+                "dayofweek": "Monday",
+                "close": {
+                    "hours": 3,
+                    "seconds": 0,
+                    "minutes": 0
+                },
+                "open": {
+                    "hours": 9,
+                    "seconds": 0,
+                    "minutes": 30
+                }
+            }
+        ],
+        "published_at": "2014-08-27T14:20:03+00:00",
+        "parent_business": {
+            "id": 2,
+            "name": "hairy bunns"
+        },
+        "website": "fuzzyribs.com",
+        "nap": {
+            "phone": "2125551234",
+            "name": "fuzz-buzz ribs",
+            "address": {
+                "city": "Los Angeles",
+                "state": "CAAAAAAAAAAAA",
+                "postal_code": 666666,
+                "cross_street": "shave pl",
+                "latitude": null,
+                "address1": "55 velvet rd.",
+                "address2": "the back door",
+                "directions": "goto razor ave. and make a left",
+                "longitude": null,
+                "neighborhood": "fuzville"
+            }
+        },
+        "attributes": {
+            "cuisine": [
+                "American - Contemporary",
+                "American"
+            ],
+            "meals_served": [
+                "Dinner"
+            ],
+            "payment_types_accepted": [
+                "visa",
+                "Master Card"
+            ]
+        },
+        "timezone": "America/Los_Angeles",
+        "out_of_business": false,
+        "is_published": true,
+        "location_id": 1,
+        "email": "yummy@hairyribs.com",
+        "aliases": [
+            "243440119118869",
+            "243432845784266",
+            "243442992452244"
+        ]
+    },
+    "schema": "http://localhost:8000/schema/marshal"
+}

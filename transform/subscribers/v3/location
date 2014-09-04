@@ -1,0 +1,73 @@
+{
+   "business_type": "{{ business_type }}",     
+   "website": "{{ website }}",
+   "is_owner_verified": {{ is_owner_verified|yesno:"true,false" }},
+   "updated": "{{ updated }}",
+   "description": "{{ description }}",
+   "created": "{{ created }}",
+   "foreign_ids": [
+       {% for foreign_id in foreign_ids %} 
+           {"{{ foreign_id.id_type }}": "{{ foreign_id.value }}"} 
+           {% if forloop.last %} {% else %}, {% endif %}
+       {% endfor %}
+   ],
+   "id": {{ location_id }},
+   "has_photos": {{ has_photos }},
+   "time_zone": "{{ time_zone }}",
+   "parent_business": {
+      "id": {{ parent_business.location_id }},
+      "name": "{{ parent_business.name }}"
+   },
+   "email": "{{ email }}",
+   "hours": [
+       {% for hrs in hours %}
+          {
+              "{{ hrs.dayofweek }}": [
+                  {% for timeslot in hrs.timeslots %}
+                  {
+                       "opening": "{{ timeslot.open.hour|stringformat:"02d" }}:{{ timeslot.open.minute|stringformat:"02d" }}",
+                       "closing": "{{ timeslot.close.hour|stringformat:"02d" }}:{{ timeslot.close.minute|stringformat:"02d" }}" 
+                   }
+                   {% if forloop.last %} {% else %}, {% endif %}
+                   {% endfor %}
+              ]
+       }
+       {% if forloop.last %} {% else %}, {% endif %}
+       {% endfor %}
+   ],
+   "phone": "{{ nap.phone }}",
+   "published_at": "{{ published_at }}",
+   "is_published": {{ is_published|yesno:"true,false" }},
+   "location": {
+        "address1": "{{ nap.address.address1 }}",
+        "address2": "{{ nap.address.address2 }}",
+        "city": "{{ nap.address.city }}",
+        "state": "{{ nap.address.state }}",
+        "postal_code": "{{ nap.address.zipcode }}",
+        "logitude": {{ nap.address.geolocation.longitude }},
+        "latitude": {{ nap.address.geolocation.latitude }},
+        "neighborhood": "{{ nap.address.neighborhood }}",
+        "cross_street": "{{ nap.address.cross_streets }}",
+        "directions": "{{ nap.address.directions }}"
+   },
+   "attributes":{
+       {% for attr in location_attributes %}
+           "{{ attr.name }}": [
+               {% for value in attr.value %}
+                   "{{ value }}"
+               {% if forloop.last %} {% else %}, {% endif %}
+               {% endfor %}
+            ]
+       {% if forloop.last %} {% else %}, {% endif %}
+       {% endfor %}
+   },
+   "out_of_business": {{ out_of_business|yesno:"true,false" }},
+   "aliases": [
+      {% for alias in aliases %}
+          "{{ alias }}"
+          {% if forloop.last %} {% else %}, {% endif %}
+      {% endfor %}
+   ],
+   "id": {{ location_id }},
+   "name": "{{ nap.name }}"
+}
